@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#2db8ff"
+    android:focusable="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="DIRECCION IP"
+        android:id="@+id/direccion"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:allowUndo="true"
+        android:textColor="@color/abc_primary_text_material_dark"
+        android:textColorHighlight="#030302"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/direccion"
+        android:layout_marginTop="9dp"
+        android:id="@+id/datos"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_ip"
+            android:background="@android:color/background_light"
+            android:hint="IP" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="NUMERO DE REDES"
+            android:id="@+id/redes_num"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="62dp"
+            android:allowUndo="true"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:textColorHighlight="#030302"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_numero"
+            android:background="@android:color/background_light"
+            android:layout_gravity="center_horizontal"
+            android:hint="numero de redes" />
+
+        <Button
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CALCULAR"
+            android:id="@+id/btn_calcular"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClickAceptar" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info."
+        android:id="@+id/btn_info"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/datos"
+        android:layout_alignEnd="@+id/datos"
+        android:onClick="creditos"
+        android:nestedScrollingEnabled="true" />
+
+</RelativeLayout>
